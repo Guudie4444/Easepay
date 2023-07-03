@@ -2,17 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,100;1,200;1,300;1,400;1,500&family=Mali:ital,wght@0,600;1,200;1,300;1,400;1,700&display=swap');
 body,
 html {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;;
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* background: url(https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60); */
+  background: url(https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 
+::-webkit-scrollbar {
+
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #008000; 
+  border-radius: 20px;
+}
 
 
 #preloader {
@@ -53,9 +68,15 @@ html {
 }
 /* Loading text */
 .container-preloader .animation-preloader .txt-loading {
-  font: bold 5em 'Montserrat', sans-serif;
-	text-align: center;	user-select: none;
+  font: bold 3rem 'Montserrat', sans-serif;
+	text-align: center;
+  user-select: none;
 }
+
+.container-preloader .animation-preloader .txt-loading .characters_pay {
+  font-size: 1.8rem;
+}
+
 .container-preloader .animation-preloader .txt-loading .characters_ease:before {
   animation: characters 4s infinite;  color: blue;
   content: attr(preloader-text);  left: 0;
@@ -198,9 +219,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  padding: 0.10rem 5vw;
-  /* box-shadow: 0 0 30px lightgray; */
-  background: #80808051;
+  padding: 0.10rem 5vw ;
+  /* height: 10vh; */
 }
 
 nav span {
@@ -234,24 +254,48 @@ nav a:hover {
 }
 
 nav .btn {
-  padding: 0.8rem 2rem;
-  margin: 0 0 0 0.5rem;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  font-size: 17px;
-  border: none;
+  box-sizing: border-box; 
+  background-color: black; 
+  border: none; 
+  border-radius: 0.6em; 
+  cursor: pointer; 
+  display: flex; 
+  font-size: 15px; 
+  font-weight: 500;
+  margin: 0;padding: 10px 20px; 
+  text-decoration: none; 
+  text-align: center; 
+  text-transform: uppercase;
+  outline: none;
+  padding: 1rem 2rem;
 }
+
+  .btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+  .fourth {
+  color: #fff; 
+  background-image: linear-gradient(45deg, #0000ff 50%, transparent 50%); 
+  background-position: 100%; 
+  background-size: 400%; 
+  transition: background 300ms ease-in-out
+}
+
+  .fourth:hover { 
+  background-position: 0}
+  .btn a:hover{
+  color: #fff}
+  .btn a:visited{
+  color: #000}
+  
+
 
 .register {
   background-color: #000000;
   color: white;
   border-radius: 5px;
-}
-
-.register:hover {
-  background-color: #0000ff;
 }
 
 .login {
@@ -266,13 +310,116 @@ nav .btn {
   border-radius: 5px;
 }
 
+
+#wrap {
+  margin: 0px auto;
+  text-align: center;
+  position: absolute;
+  right: 4%;
+
+}
+
+.btn-slide, .btn-slide2 {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  line-height: 50px;
+  padding: 0;
+  border-radius: 50px;
+  background: #fdfdfd;
+  border: 2px solid #0099cc;
+  margin: 10px;
+  transition: .5s;
+}
+
+.btn-slide2 {
+  border: 2px solid #efa666;
+}
+
+.btn-slide:hover {
+  background-color: #0099cc;
+}
+
+.btn-slide2:hover {
+  background-color: #efa666;
+}
+
+.btn-slide:hover span.circle, .btn-slide2:hover span.circle2 {
+  left: 100%;
+  margin-left: -45px;
+  background-color: #fdfdfd;
+  color: #0099cc;
+}
+
+.btn-slide2:hover span.circle2 {
+  color: #efa666;
+}
+
+.btn-slide:hover span.title, .btn-slide2:hover span.title2 {
+  left: 40px;
+  opacity: 0;
+}
+
+.btn-slide:hover span.title-hover, .btn-slide2:hover span.title-hover2 {
+  opacity: 1;
+  left: 40px;
+}
+
+.btn-slide span.circle, .btn-slide2 span.circle2 {
+  display: block;
+  background-color: #0099cc;
+  color: #fff;
+  position: absolute;
+  float: left;
+  margin: 5px;
+  line-height: 42px;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  border-radius: 50%;
+}
+
+.btn-slide2 span.circle2 {
+  background-color: #efa666;
+}
+
+.btn-slide span.title,
+.btn-slide span.title-hover, .btn-slide2 span.title2,
+.btn-slide2 span.title-hover2 {
+  position: absolute;
+  left: 90px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #30abd5;
+  transition: .5s;
+}
+
+.btn-slide2 span.title2,
+.btn-slide2 span.title-hover2 {
+  color: #efa666;
+  left: 80px;
+}
+
+.btn-slide span.title-hover, .btn-slide2 span.title-hover2 {
+  left: 80px;
+  opacity: 0;
+}
+
+.btn-slide span.title-hover, .btn-slide2 span.title-hover2 {
+  color: #fff;
+}
+
 .hero_background {
   height: 86vh;
-  justify-content: start;
+  /* justify-content: start; */
   align-items: center;
   margin: 0;
   padding: 0;
-  background: #80808051;
 }
 
 .hero_content {
@@ -280,17 +427,13 @@ nav .btn {
 }
 
  .wrapper {
-  padding: 50px 15vw 0px 5vw;
-  /* display: flex; */
-
+  padding: 50px 32vw 0px 4vw;
 }
 
 
 h1 {
-  max-width: 75%;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
 }
 
 
@@ -306,7 +449,7 @@ h1 {
 .title-2 {
   font-size: 1.2rem;
   font-weight: 300;
-  padding: 20px 40rem 20px 0px;
+  padding: 20px 20rem 20px 0px;
 }
 
 .hero_icons {
@@ -314,52 +457,40 @@ h1 {
 }
 
 .advertiser-content   {
+  max-width: 650px;
   position: absolute;
-  right: 0%;
   bottom: 0%;
-  float: left;
-  width: 40rem;
-  height: 40rem;
-  margin: 20px;
-  shape-outside: circle();
-  clip-path: circle();
-  background: #ffffff;
-  top: 25%;
-  /* max-width: 400px; */
+  right: 0%;
 }
 
 .advertiser {
   width: 100%;
   height: auto;
-  padding-bottom: 170px;
+  /* padding-bottom: 170px; */
 }
 
  /* whychooseus section codes  whychooseus section codes  whychooseus section codes  whychooseus section codes  whychooseus section codes  whychooseus section codes */
 
 
-.whychooseus_container {
-   position: sticky;
-   padding: 1rem;
-   z-index: 9;
-}
+
 
 .whychooseus_content {
   display: flex;
   justify-content: center;
-  padding: 100px;
+  padding: 60px 0px 50px 0px;
   align-items: center;
 }
 
 .whychooseus {
   text-align: center;
-  padding: 0px 150px;
+  padding: 0px 250px;
 }
 
 .whychooseus h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   text-transform: capitalize;
-  
+  padding-bottom: 20px;
 }
 
 .whychooseus p {
@@ -392,16 +523,16 @@ h1 {
 }
 
 
-.light {
-  background: #0000ffb5;
+.red {
+  background: #ff0000;
 }
 
 .blue {
   background: #0000ff;
 }
 
-.dark {
-  background: #00008b;
+.green {
+  background: #008000;
 }
 
 .light:hover {
@@ -436,8 +567,6 @@ h1 {
   margin: 70px;
 }
 
-
-
 .box_content > div img {
   max-width: 100%;
 
@@ -447,28 +576,29 @@ h1 {
 
 
 .finacial_freedom {
-  justify-content: start;
-  background: #80808051;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .finacial_freedom_content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 100px;
 }
 
 .finacial_freedom_text {
- 
+   padding-left: 85px;
+
 }
 
 .finacial_freedom_text h2 {
-  font-size: 3rem;
+  font-size: 3.3rem;
 }
 
 .finacial_freedom_text p {
   font-size: 1.2rem;
-  margin: 20px 0px 20px;
+  margin: 50px 0px 50px 0px;
 }
 
 .finacial_freedom .btn0 {
@@ -488,7 +618,7 @@ h1 {
   max-width: 400px;
   position: absolute;
   bottom: 0%;
-  right: 3%;
+  right: 5%;
 }
 
 .finacial_freedom_advertiser {
@@ -497,49 +627,28 @@ h1 {
 }
 
 
-.paycard_container {
-  background-image: url();
-  color: #000000;
+.slide img {
+  width: 100px;
+  height: 100px;
+  animation: scroll 60s linear infinite;
 }
 
-.paycard_content {
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10rem 0px;
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
 }
 
-.paycard_text h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #000000;
-  text-transform: capitalize;
-  letter-spacing: 1px;
+.slider {
+  margin: 0px;
+  padding: 8em 0em 2em 0em;
 }
 
-.paycard_text p {
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #000000;
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translatex(-1000%)}
 }
-
-
-.logo {
-  height: 160px;
-  width : 160px;
-  /* border-radius: 50px; */
-}
-
-.paycard_logo {
-  max-width: 1250px;
-  margin: 0 auto;
-  display: grid;
-  gap: 0.2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  justify-items: center;
-  align-items: center;
-}
-
 
 
 
@@ -556,7 +665,7 @@ a {
 }
 
 .ct-footer {
-  background: #80808051;
+  /* background: #80808051; */
   padding: 50px;
   position: relative;
 }
@@ -597,7 +706,7 @@ a {
 .ct-footer-list > li ul li a {
   color: #000000;
   text-transform: capitalize;
-
+  font-size: 20px;
 }
 .ct-footer-list > li ul li a:hover,
 .ct-footer-post a:hover {
@@ -640,93 +749,6 @@ a {
 }
 /* MOBILE */
 @media screen and (max-width: 850px) {
-  
-  .hero_background {
-    height: 86vh;
-    justify-content: start;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background: #80808051;
-  }
-  
-  .hero_content {
-    display: flex;
-    justify-content: center;
-  }
-  
-   .wrapper {
-    padding: 0px;  
-  }
-  
-  
-  h1 {
-    max-width: 75%;
-    font-size: 3rem;
-    text-align: left;
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  
-  
-  .title {
-    background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg);
-    background-attachment: fixed;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-  
-  
-  .title-2 {
-    font-size: 1.2rem;
-    font-weight: 300;
-    padding: 20px 40rem 20px 0px;
-  }
-  
-  .hero_icons {
-    width: 35%;
-  }
-
-
-  .advertiser-content   {
-    position: absolute;
-    margin: 0px;
-    background: none;
-    /* max-width: 400px; */
-  }
-
-  .advertiser {
-    width: 100%;
-    height: auto;
-    padding-bottom: 170px;
-  }
-
-  .finacial_freedom_content {
-    display: block;
-    align-items: center;
-    padding: 0%;
-    margin: 0%;
-    text-align: center;
-  }
-  
-
-  .finacial_freedom_text {
-    text-align: center;
-    /* margin-bottom: 300px; */
-  }
-
-
-  .finacial_freedom_text h1 {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .finacial_freedom_img   {
-   position: relative;
-   display: inline-flex;
-   justify-content: center;
-  }
-  
   nav {
     padding: 1rem 5vw;
   }
@@ -737,6 +759,127 @@ a {
   nav .big-screens {
     display: none;
   }
+
+    /* hero_background responsiveness section */
+
+
+  .hero_background {
+    height: 86vh;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    padding: 40px 0px 0px 0px;
+  }
+  
+  .hero_content {
+    display: block;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+   .wrapper {
+    text-align: center;
+    padding: 0%;  
+  }
+  
+  .title-2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 30px 0px 30px 0px;
+  }
+
+   .hero_icons {
+    width: 20%;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  nav p {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .hero_icons {
+    width: 35%;
+  }
+
+
+  .advertiser-content   {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    right: 0%;
+    margin: 20px;
+  }
+
+  /* finacial_freedom responsiveness section */
+
+  .finacial_freedom_content {
+    display: block;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+    margin: 0%;
+    text-align: center;
+  }
+  
+
+  .finacial_freedom_text {
+    text-align: center;
+    padding: 0px;
+  }
+
+
+  .finacial_freedom_text h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .finacial_freedom_text p {
+    font-size: 1.2rem;
+  }
+
+  .finacial_freedom_img   {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   right: 0%;
+  }
+  
+  /* cards responsiveness section */
+
+  .cards {
+   padding: 20px 8px 20px 8px;
+  }
+
+  /* whychooseus responsiveness section */
+
+  .whychooseus_content {
+    padding: 60px 0px 0px 0px;
+    margin: 0%;
+  }
+  
+  .whychooseus {
+    padding: 0px;
+  }
+  
+  .whychooseus h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    
+  }
+  
+  .whychooseus p {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+  
+ 
 }
 
 
