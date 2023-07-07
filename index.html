@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Banking App</title>
 </head>
 <body >
-  <div id="preloader">
+  <section id="preloader">
     <div id="container" class="container-preloader">
         <div class="animation-preloader">
             <div class="spinner"></div>
             <div class="txt-loading">
                 <span preloader-text="E" class="characters_ease">E</span>
                 
-                <span preloader-text="A" class="characters_ease">A</span>
+                <span preloader-text="a" class="characters_ease">a</span>
                 
-                <span preloader-text="S" class="characters_ease">S</span>
+                <span preloader-text="s" class="characters_ease">s</span>
                 
-                <span preloader-text="E" class="characters_ease">E</span>
+                <span preloader-text="y" class="characters_ease">y</span>
                 
                 <span preloader-text="P" class="characters_pay">P</span>
                 
-                <span preloader-text="A" class="characters_pay">A</span>
+                <span preloader-text="a" class="characters_pay">a</span>
                 
-                <span preloader-text="Y" class="characters_pay">Y</span>
+                <span preloader-text="y" class="characters_pay">y</span>
             </div>
         </div>	
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-</div>	
-    <nav class="flex align-center ">
-        <p><span>Ease</span>Pay</p>
+</section>	
+    <nav class="flex align-center hello ">
+        <p><span>Easy</span>Pay</p>
         <ul>
           <li class="big-screens">
             <a href="#">About Us</a>
             <a href="#">FAQ</a>
            
             <button class="btn fourth">Sign Up</button>
+            <!-- <div class="button">
+              <input type="radio" class="radio">
+              <a class="download">Download</a>
+              <a class="open" href="#" download>Open File</a>
+            </div> -->
             <!-- <button class="btn login">Log In</button> -->
           </li>
           <li class="small-screens">
@@ -48,23 +54,12 @@
         </ul>
       </nav>
 
-      <!-- <div id="wrap">
-        <a href="#" class="btn-slide">
-          <span class="circle"><i class="fa fa-rocket"></i></span>
-          <span class="title">Appstore</span>
-          <span class="title-hover">Click here</span>
-        </a>
-        <a href="#" class="btn-slide2">
-          <span class="circle2"><i class="fa fa-download"></i></span>
-          <span class="title2">Playstore</span>
-          <span class="title-hover2">Click here</span>
-        </a>
-        </div> -->
-
+      
+      
       <section class="hero_background">
       <div class="hero_content">
       <div class="wrapper">
-        <h1 class="title">Save and Make Payments with<br>easepay<h1>
+        <h1 class="title">Save and Make Payments with<br>ease<h1>
         <h4 class="title-2">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</h4>
         <img class="hero_icons" src="https://www.freepnglogos.com/uploads/app-store-logo-png/google-play-and-apple-app-store-logos-22.png" alt="App-stores">
       </div>
@@ -78,11 +73,11 @@
     <!-- whychooseus section codes  whychooseus section codes  whychooseus section codes  whychooseus section codes  whychooseus section codes  whychooseus section codes-->
 
 
-  <section class="whychooseus_container">
+  <section class="whychooseus_container hideme">
 
   <div class="whychooseus_content">
-   <div class="whychooseus">
-    <h3 class="title">why choose us</h3>
+   <div class="whychooseus ">
+    <h3>why choose us</h3>
     <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
    </div>
    </div>
@@ -95,7 +90,7 @@
 
 <!-- The box section codes  The box section codes  The box section codes The box section codes The box section codes   The box section codes  The box section codes-->
 
-<section class="box_container">
+<section class="box_container hideme">
   <div class="box_content">
         <div class="box">
           <img src="/images/Group 433.png" alt="tshirt photo">
@@ -112,24 +107,30 @@
 <!-- finacial_freedom section codes  finacial_freedom section codes finacial_freedom section codes finacial_freedom section codes finacial_freedom section codes finacial_freedom section codes -->
 
 
- <section class="finacial_freedom">
+ <section id="dynamic" class="finacial_freedom hideme ">
   <div class="finacial_freedom_content">
-  <div class="finacial_freedom_text">
-    <h2 class="title">Financial Freedom at your<br>finger tips</h2>
+  <div class="finacial_freedom_text bg-move">
+    <h2>Financial Freedom at your<br>finger tips</h2>
     <p>  Create an account today under 10 minutes and start<br>making transactions today.</p>
     <button class="btn0">Sign Up</button>
   </div>
-    <div class="finacial_freedom_img">
-      <img class="finacial_freedom_advertiser" src="/images/Group 427.png" alt="finacial_freedom">
+    <div class="finacial_freedom_img section ">
+      <img class="finacial_freedom_advertiser bg-move" src="/images/Group 427.png" alt="finacial_freedom">
     </div>
   </div>
   </div>
 </section> 
 
 <!-- paycard section codes paycard section codes paycard section codes paycard section paycard section codes paycard section codes codes-->
-
-<section class="slider">
+<section class="paycard_container hideme">
+  <div class="paycard_content">
+<div class="slidetext_content">
+  <h3>Pay with your card anywhere around the world</h3>
+  <p>Choose from a variety of card to make Payments. We got you covered</p>
+ </div>
+<div class="slider">
   <div class="slide-track">
+   
     <div class="slide">
       <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
     </div>
@@ -185,19 +186,89 @@
       <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
     </div>
   </div>
+  </div>
+</div>
+</div>
 </section>
   
 
 
- 
+  <!-- /* .chatbot code section .chatbot code section .chatbot code section .chatbot code section */ -->
+
+  <section class="chatbot chatbot--closed">
+    <div class="chatbot__header">
+      <i class="fa fa-commenting" aria-hidden="true"></i>
+
+      <p><strong>Got a question?</strong> <span class="u-text-highlight">Ask Harry</span></p>
+      <!-- <svg class="chatbot__close-button icon-speech" viewBox="0 0 32 32">
+        <use xlink:href="#icon-speech" />
+      </svg> -->
+      <svg class="chatbot__close-button icon-close" viewBox="0 0 32 32">
+        <use xlink:href="#icon-close" />
+      </svg>
+    </div>
+    <div class="chatbot__message-window">
+      <ul class="chatbot__messages">
+        <li class="is-ai animation">
+          <div class="is-ai__profile-picture">
+            <svg class="icon-avatar" viewBox="0 0 32 32">
+              <use xlink:href="#avatar" />
+            </svg>
+          </div>
+          <span class="chatbot__arrow chatbot__arrow--left"></span>
+          <p class='chatbot__message'>Hi there 🖐. I’m Harry, your virtual assistant. I'm here to help with your general enquiries.</p>
+        </li>
+        <!-- Answer and response added here -->
+      </ul>
+    </div>
+    <div class="chatbot__entry chatbot--closed">
+      <input type="text" class="chatbot__input" placeholder="Write a message..." />
+      <svg class="chatbot__submit" viewBox="0 0 32 32">
+        <use xlink:href="#icon-send" />
+      </svg>
+    </div>
+  </section>
+  
+  <!-- Symbols -->
+  <svg>
+    <!-- Close icon -->
+    <symbol id="icon-close" viewBox="0 0 32 32">
+      <title>Close</title>
+      <path d="M2.624 8.297l2.963-2.963 23.704 23.704-2.963 2.963-23.704-23.704z" />
+      <path d="M2.624 29.037l23.704-23.704 2.963 2.963-23.704 23.704-2.963-2.963z" />
+    </symbol>
+  
+    <!-- Speech icon -->
+    <symbol id="icon-speech" viewBox="0 0 32 32">
+      <title>Speech</title>
+      <path d="M21.795 5.333h-11.413c-0.038 0-0.077 0-0.114 0l-0.134 0.011v2.796c0.143-0.006 0.273-0.009 0.385-0.009h11.277c0.070 0 7.074 0.213 7.074 7.695 0 5.179-2.956 7.695-9.036 7.695h-3.792c-0.691 0-1.12 0.526-1.38 1.159l-1.387 3.093-1.625 3.77 0.245 0.453h2.56l2.538-5.678h2.837c7.633 0 11.84-3.727 11.84-10.494 0.001-8.564-7.313-10.492-9.875-10.492z" />
+      <path d="M10.912 24.259c-0.242-0.442-0.703-0.737-1.234-0.737-0 0-0 0-0 0h-0.56c-0.599-0.011-1.171-0.108-1.71-0.28l0.042 0.012c-1.82-0.559-4.427-2.26-4.427-7.424 0-6.683 5.024-7.597 7.109-7.686v-2.8c-2.042 0.095-9.91 1.067-9.91 10.483 0 4.832 1.961 7.367 3.606 8.64 1.38 1.067 3.109 1.744 4.991 1.843l0.033 0.019 2.805 5.211 1.41-3.273z" />
+    </symbol>
+  
+    <!-- Send icon -->
+    <symbol id="icon-send" viewBox="0 0 23.97 21.9">
+      <title>Send</title>
+      <path d="M0.31,9.43a0.5,0.5,0,0,0,0,.93l8.3,3.23L23.15,0Z"/>
+      <path d="M9,14.6H9V21.4a0.5,0.5,0,0,0,.93.25L13.22,16l6,3.32A0.5,0.5,0,0,0,20,19l4-18.4Z"/>
+    </symbol>
+    
+    <!-- Avatar icon -->
+    <symbol id="avatar" width="32" height="32" viewBox="0 0 44.25 44">
+      <title>Avatar</title>
+      <path style="fill: #7226e0; fill-rule: evenodd;" d="M1035.88,1696.25a22,22,0,1,1-22.13,22A22.065,22.065,0,0,1,1035.88,1696.25Z" transform="translate(-1013.75 -1696.25)"/>
+      <path style="fill: #fff; fill-rule: evenodd;" d="M1030.18,1725.16h2.35a0.335,0.335,0,0,0,.34-0.33v-5.23h5.94v5.23a0.342,0.342,0,0,0,.34.33h2.36a0.342,0.342,0,0,0,.34-0.33v-12.36a0.34,0.34,0,0,0-.34-0.32h-2.36a0.34,0.34,0,0,0-.34.32v4.51h-5.94v-4.51a0.333,0.333,0,0,0-.34-0.32h-2.35a0.333,0.333,0,0,0-.34.32v12.36a0.335,0.335,0,0,0,.34.33" transform="translate(-1013.75 -1696.25)"/>
+    </symbol>
+    
+  </svg>
+
 <!-- footer section codes  footer section codes    footer section codes  footer section codes  footer section codes  footer section codes-->
 
- 
- <footer class="ct-footer">
+
+ <footer class="ct-footer hideme">
    <div class="container">
      <ul class="ct-footer-list ">
        <li>
-         <p class="ct-footer-list-header f-logo"><span>Ease</span>Pay</p>
+         <p class="f-logo"><span>Easy</span>Pay</p>
        </li>
        <li>
          <h2 class="ct-footer-list-header">content</h2>
@@ -260,8 +331,8 @@
          </ul>
        </div>
        <div class="inner-right">
-         <p>Copyright &copy; 2016 WebCorpCo.&nbsp;<a href="">Privacy Policy</a></p>
-         <p><a class="ct-u-motive-color" href="" target="_blank">Web Design</a> by DigitalUs on <a href="" target="_blank">Solodev CMS</a></p>
+         <p>Copyright &copy; 2022 WebCorpCo.&nbsp;<a href="">Privacy Policy</a></p>
+         <p><a class="ct-u-motive-color" href="" target="_blank">Web Design</a> by Guuie on <a href="" target="_blank">Solodev CMS</a></p>
        </div>
      </div>
    </div>
@@ -270,5 +341,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       <script src="App.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
