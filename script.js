@@ -341,23 +341,24 @@ const send = (text = '') => {
       Authorization: 'Bearer ' + accessToken,
       'Content-Type': 'application/json; charset=utf-8'
     }
+  
   })
-  .then(response => response.json())
-  .then(res => {
-    if (res.status < 200 || res.status >= 300) {
-      let error = new Error(res.statusText)
-      throw error
-    }
-    return res
-  })
-  .then(res => {
-    setResponse(res.result, botLoadingDelay + botReplyDelay)
-  })
-  .catch(error => {
-    setResponse(errorMessage, botLoadingDelay + botReplyDelay)
-    resetInputField()
-    console.log(error)
-  })
+  // .then(response => response.json())
+  // .then(res => {
+  //   if (res.status < 200 || res.status >= 300) {
+  //     let error = new Error(res.statusText)
+  //     throw error
+  //   }
+  //   return res
+  // })
+  // .then(res => {
+  //   setResponse(res.result, botLoadingDelay + botReplyDelay)
+  // })
+  // .catch(error => {
+  //   setResponse(errorMessage, botLoadingDelay + botReplyDelay)
+  //   resetInputField()
+  //   console.log(error)
+  // })
 
   aiMessage(loader, true, botLoadingDelay)
 }

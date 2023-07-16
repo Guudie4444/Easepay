@@ -2,9 +2,10 @@
 
  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
  body, html {
-     font-family: 'Montserrat', sans-serif;
-    ;
      margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
      overflow-x: hidden;
      scroll-behavior: smooth;
      background-position: center;
@@ -41,6 +42,8 @@
      top:0;
      width:100%;
      z-index:900;
+    /* background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg); */
+
     /* background-color: #000 !important;
      */
 }
@@ -402,7 +405,12 @@
      text-align: left;
 }
  .title {
-     background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg);
+    background: #a64bf4;
+    background: -webkit-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -o-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    background: -moz-linear-gradient(to left,#00dbde, #fc00ff, #00dbde,#fc00ff);
+    background: linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+     /* background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg); */
      background-attachment: fixed;
      -webkit-text-fill-color: transparent;
      -webkit-background-clip: text;
@@ -527,16 +535,20 @@
      margin: 30px 35px 40px 0px;
 }
  .finacial_freedom .btn0 {
-     padding: 1rem 2rem;
-     margin: 20px 0px;
-     border-radius: 20px;
-     font-weight: 600;
-     cursor: pointer;
-     transition: 0.2s ease-in-out;
-     font-size: 17px;
-     border: none;
-     background: #000000;
-     color: #ffffff;
+    box-sizing: border-box;
+    background-color: black;
+    border: none;
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    padding: 1rem 2rem;
 }
  .finacial_freedom_img {
      max-width: 400px;
@@ -554,12 +566,13 @@
 }
  .paycard_container {
      margin: 0px;
-     padding: 6em 0em 6em 0em;
+     padding: 6rem 0em 0rem 0em;
 }
  .paycard_content {
      display: block;
      justify-content: center;
      align-items: center;
+     text-align: center;
 }
  .slidetext_content {
      text-align: center;
@@ -579,10 +592,20 @@
      padding: 20px 0px 50px 0px;
 }
  .slide img {
-     width: 70px;
-     height: 70px;
+     width: 80px;
+     height: 80px;
      animation: scroll 60s linear infinite;
+     align-items: center;
+     margin-top: 50px;
 }
+
+
+/* .slide img:hover {
+    box-shadow: 0 2px 14px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+} */
+
  .slide-track {
      width: 100%;
      display: flex;
@@ -1351,7 +1374,7 @@
          width: 20%;
     }
      h1 {
-         font-size: 2.5rem;
+         font-size: 2.3rem;
     }
      .hero_icons {
          width: 35%;
@@ -1373,7 +1396,7 @@
          padding: 0px;
     }
      .whychooseus h3 {
-         font-size: 2.5rem;
+         font-size: 2.3rem;
          font-weight: 900;
          text-transform: capitalize;
     }
@@ -1409,6 +1432,8 @@
          display: inline-flex;
          justify-content: center;
          right: 0%;
+         margin-top: 40px;
+
     }
     /* cards responsiveness section */
      .cards {

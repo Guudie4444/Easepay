@@ -21,6 +21,7 @@
   bottom: 0;
   width: 100%;
   box-shadow: 0 -6px 99px -17px rgba(0, 0, 0, 0.68);
+  z-index: 900;
 }
 
 .chatbot.chatbot--closed {
@@ -133,11 +134,11 @@
   background-color: #7ee0d2;
   margin-left: 30px;
 }
+
 .chatbot__message a {
   color: #7226e0;
   word-break: break-all;
   display: inline-block;
-  font-size: 15px;
 
 }
 .chatbot__message p:first-child {
@@ -320,7 +321,7 @@ strong {
 @media screen and (min-width: 640px) {
     .chatbot {
       max-width: 420px;
-      right: 80px;
+      right: 0px;
       top: auto;
     }
   }
