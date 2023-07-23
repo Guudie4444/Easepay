@@ -259,7 +259,7 @@ const processResponse = val => {
     let output = ''
     let messagesLength = val.fulfillment.messages.length
 
-    for (let i = 0; i < messagesLength; i++) {
+    for (let i = 0; i < messagesLength; i++) {3
       let message = val.fulfillment.messages[i]
       let type = message.type
 
