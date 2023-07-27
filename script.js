@@ -128,23 +128,6 @@ $(document).ready(function() {
     
 });
 
-$(document).ready(function(){
-	$(this).scroll(function(){
-		var $winheight = $(window).height();// get height of window
-		var $winPos = $(document).scrollTop() + $winheight - 50;// get postion of scroll bar then add the window height and subtrack 50px, creating position 50 px above the bottom of the screen.
-			$('.bg-move').each(function(){ // do this for each image
-				var $pos = $(this).offset().top; //get the position for image
-				if ($winPos > $pos){ // if the image is above the winPos do this
-					$(this).addClass('animate');
-				}
-				else {// remove else if you want animation to happen once. 
-					$(this).removeClass('animate');
-				}
-				// $('.pos').text($pos +' // '+ $winPos); // for testing 
-			});
-		});
-});
-
 
 /* .chatbot code section .chatbot code section .chatbot code section .chatbot code section */
 

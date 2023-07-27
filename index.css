@@ -3,18 +3,6 @@
     opacity:0;
 }
 
-.bg-move{
-	display:block;
-	opacity:0;
-	transform:rotateY(50deg) rotateZ(5deg);
-	&.animate{
-		opacity: 1;
-		transform:rotateY(0deg) rotateZ(0deg);
-		transition: all .10s ease-in;
-	}
-}
-
-
 .chatbot {
   position: fixed;
   top: 0;
