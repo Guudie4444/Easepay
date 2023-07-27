@@ -362,3 +362,6 @@ const send = (text = '') => {
 
   aiMessage(loader, true, botLoadingDelay)
 }
+
+
+

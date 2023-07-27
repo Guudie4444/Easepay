@@ -22,8 +22,8 @@
 }
 /* Handle */
  ::-webkit-scrollbar-thumb {
-     background: #008000;
-     border-radius: 20px;
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_640.jpg);
+    border-radius: 20px;
 }
  #preloader {
     /* background: url('');
@@ -405,15 +405,10 @@
      text-align: left;
 }
  .title {
-    background: #a64bf4;
-    background: -webkit-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-    background: -o-linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-    background: -moz-linear-gradient(to left,#00dbde, #fc00ff, #00dbde,#fc00ff);
-    background: linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
-     /* background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg); */
-     background-attachment: fixed;
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_640.jpg);
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
  .title-2 {
      font-size: 1.2rem;
@@ -1365,6 +1360,11 @@
          padding: 0px 0vw 0px 0vw;
          margin-left: 20px;
     }
+
+    .title {
+        font-size: 2.6rem;
+    }
+
      .title-2 {
          font-size: 1.2rem;
          font-weight: 300;
@@ -1372,6 +1372,10 @@
     }
      .hero_icons {
          width: 20%;
+         margin: 0 auto;
+         display: block;
+         justify-content: center;
+         padding: 10px;
     }
      h1 {
          font-size: 2.3rem;
